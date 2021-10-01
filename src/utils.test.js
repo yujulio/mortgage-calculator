@@ -1,5 +1,5 @@
 const {
-  calculatePrincipalAndInterest,
+  calculatePrincipleAndInterest,
   calculateTaxRate,
   calculateinsuranceRate,
   calculateMontlyPayment,
@@ -8,7 +8,7 @@ const {
 } = require('./utils');
 
 test('should calculate Principal and Interest', () => {
-  const result = calculatePrincipalAndInterest('10', '100000', 40);
+  const result = calculatePrincipleAndInterest('10', '100000', 40);
   expect(result).toBe(849.1459110721892);
 });
 

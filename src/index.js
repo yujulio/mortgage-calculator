@@ -1,7 +1,7 @@
 import './styles.scss';
 
 const {
-  calculatePrincipalAndInterest,
+  calculatePrincipleAndInterest,
   calculateTaxRate,
   calculateinsuranceRate,
   calculateMontlyPayment,
@@ -87,7 +87,7 @@ function calculateRate() {
     return false;
   }
 
-  const principleAndInterest = calculatePrincipalAndInterest(
+  const principleAndInterest = calculatePrincipleAndInterest(
     interestInput.value, loan.value, mortageInput.value,
   );
   const taxRate = calculateTaxRate(tax.value);
