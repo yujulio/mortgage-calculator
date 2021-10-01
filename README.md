@@ -1,6 +1,6 @@
 # mortgage-calculator
 
-Empty project.
+This is an implementation of a mortage calculator based from this [design](https://drive.google.com/file/d/18bzDzrNNN5wPy5WUlJ2fweSBvDFiLfDD/view)
 
 ## Building and running on localhost
 
@@ -36,6 +36,13 @@ To run unit tests:
 npm test
 ```
 
-## Credits
+## Known issues
 
-Made with [createapp.dev](https://createapp.dev/)
+- There's no currency symbol in the inputs
+- The range slider does not differ the background color from full to empty
+- Did not use the fonts provided by the documents as their dropbox links were expired
+- There were no specifications about the rounding of the excess decimal so I took the liberty to round them up in every calculation
+- From the desktop design there were no input for the years of mortage value, I added them as the mobile design did have one and it would be more intuitive
+- There are no max and min input validation for any of the number inputs as they were not specified so it can ran into calculation errors with very high or low values
+- It's not pixel perfect 
+- Many of these's issues could have been taken care for but I did not have and wanted to spend to much time working on them
