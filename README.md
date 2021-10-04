@@ -38,7 +38,6 @@ npm test
 
 ## Known issues
 
-- There's no currency symbol in the inputs
 - The range slider does not differ the background color from full to empty
 - Did not use the fonts provided by the documents as their dropbox links were expired
 - There were no specifications about the rounding of the excess decimal so I took the liberty to round them up in every calculation

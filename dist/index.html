@@ -55,18 +55,27 @@
           </div>
           <div class="input-container flex-column">
             <label for="loanAmount">Loan Amount</label>
-            <input id="loanAmount" type="number" data-js="loan" aria-label="loanAmount" required/>
+            <div class="input-box">
+              <span class="prefix">$</span>
+              <input id="loanAmount" type="number" data-js="loan" aria-label="loanAmount" required/>
+            </div>
             <small class="error-message">Mandatory field</small>
           </div>
           <div class="input-container">
             <div class="col ps-2">
               <label for="annualTax">Annual Tax</label>
-              <input id="annualTax" aria-label="annualTax" type="number" data-js="tax" required/>
+              <div class="input-box">
+                <span class="prefix">$</span>
+                <input id="annualTax" aria-label="annualTax" type="number" data-js="tax" required/>
+              </div>
               <small class="error-message">Mandatory field</small>
             </div>
             <div class="col">
               <label for="annualInsurance">Annual Insurance</label>
-              <input id="annualInsurance" aria-label="annualInsurance" type="number" data-js="insurance" required/>
+              <div class="input-box">
+                <span class="prefix">$</span>
+                <input id="annualInsurance" aria-label="annualInsurance" type="number" data-js="insurance" required/>
+              </div>
               <small class="error-message">Mandatory field</small>
             </div>
           </div>

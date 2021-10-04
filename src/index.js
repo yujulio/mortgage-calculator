@@ -31,7 +31,7 @@ function cleanForm() {
   });
 
   const inputsAndResults = document.querySelectorAll(
-    '.input-container small, .input-container input, .calculator-results p, .calculator-results',
+    '.input-container small, .input-box, .calculator-results p, .calculator-results',
   );
   inputsAndResults.forEach((item) => item.classList.remove('show', 'error', 'active'));
 }
@@ -52,18 +52,18 @@ function checkInputs() {
   const insuranceValue = insurance.value;
 
   if (!loanValue) {
-    loan.parentElement.querySelector('small').classList.add('show');
-    loan.classList.add('error');
+    loan.parentElement.parentElement.querySelector('small').classList.add('show');
+    loan.parentElement.classList.add('error');
   }
 
   if (!taxValue) {
-    tax.parentElement.querySelector('small').classList.add('show');
-    tax.classList.add('error');
+    tax.parentElement.parentElement.querySelector('small').classList.add('show');
+    tax.parentElement.classList.add('error');
   }
 
   if (!insuranceValue) {
-    insurance.parentElement.querySelector('small').classList.add('show');
-    insurance.classList.add('error');
+    insurance.parentElement.parentElement.querySelector('small').classList.add('show');
+    insurance.parentElement.classList.add('error');
   }
 
   return loanValue && taxValue && insuranceValue;
