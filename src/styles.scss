@@ -55,6 +55,13 @@ body {
     align-items: center;
     font-size: 31.25px;
   }
+
+  .container {
+    @media screen and (max-width: $breakpoint-md) {
+      padding: 0 17.5px;
+      justify-content: flex-start;
+    }
+  }
 }
 
 .calculator {
@@ -67,8 +74,10 @@ body {
   }
 
   p:first-child {
-    border-bottom: 1px solid #dddddd;
     padding: 0 0 12px;
+    @media screen and (max-width: $breakpoint-md) {
+      padding: 0 16px 12px;
+    }
   }
 
   .calculator-inputs {
@@ -81,11 +90,18 @@ body {
 
     @media screen and (max-width: $breakpoint-md) {
       width: 100%;
+      min-height: 560px;
+      padding: 16px 0;
     }
 
     p {
       font-size: 14.5px;
       line-height: 24px;
+
+      @media screen and (max-width: $breakpoint-md) {
+        font-size: 12.9px;
+        line-height: 150%;
+      }
     }
 
     .error-message {
@@ -96,12 +112,33 @@ body {
       letter-spacing: 0.023em;
       color: #D83E00;
       padding-top: 8px;
-      display: block;
+      display: none;
+
+      &.show {
+        display: block;
+      }
     }
 
     .input-container {
       display: flex;
       margin-bottom: 16px;
+
+      &:first-of-type {
+        @media screen and (max-width: $breakpoint-md) {
+          margin-top: 16px;
+        }
+      }
+
+      &:nth-child(-n+3) label {  
+        @media screen and (max-width: $breakpoint-md) {
+          font-size: 12.8px;
+          margin: 0;
+        }
+      }
+
+      @media screen and (max-width: $breakpoint-md) {
+        padding: 0 16px;
+      }
 
       .input-values {
         display: flex;
@@ -214,8 +251,8 @@ body {
       color: #2E2F2F;
 
       @media screen and (max-width: $breakpoint-md) {
-        font-size: 12.8px;
-        margin: 0;
+        font-size: 14.4px;
+        margin: 8px 0;
       }
     }
 
@@ -228,6 +265,11 @@ body {
       width: 100%;
       font-size: 20px;
       font-weight: 600;
+
+      @media screen and (max-width: $breakpoint-md) {
+        height: 48px;
+        font-size: 18px;
+      }
 
       &:hover {
         cursor: pointer;
@@ -247,6 +289,7 @@ body {
         background: #FBFCFF;
         border: 1px solid #316EEF;
         outline-color: #316EEF;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
       }
 
       &.error {
@@ -267,7 +310,7 @@ body {
     @media screen and (max-width: $breakpoint-md) {
       transform: translate3d(0, -400px, 0);
       width: 90%;
-      padding: 0 32px 32px;
+      padding: 0 14px 32px;
 
       .col {
         display: flex;
@@ -354,4 +397,10 @@ body {
       }
     }
   }
+}
+
+.separator {
+  width: 100%;
+  border-top: 1px solid #DDDDDD;
+  display: block;
 }
